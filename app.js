@@ -26,7 +26,7 @@ arrayUserButton.forEach((nodo) => {
     tie();
     // termina empate
     //PIEDRA//
-    function stone() {
+    function rock() {
       if (
         userChoice.innerText === "piedra" &&
         pcChoice.innerText != "papel" &&
@@ -55,8 +55,8 @@ arrayUserButton.forEach((nodo) => {
         };
       }
     }
-    stone();
-    function paper() {
+    rock();
+    function papper() {
       //PAPEL//
       if (
         userChoice.innerText === "papel" &&
@@ -86,7 +86,7 @@ arrayUserButton.forEach((nodo) => {
         };
       }
     }
-    paper();
+    papper();
     //TIJERA//
     function scissor() {
       if (
