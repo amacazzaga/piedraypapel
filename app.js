@@ -11,51 +11,51 @@ arrayUserButton.forEach((nodo) => {
     const randomNumber = Math.floor(Math.random() * arrayValues.length);
     pcChoice.innerText = arrayValues[randomNumber];
     //empieza empate
-    function tie() {
-      if (userChoice.innerText === pcChoice.innerText) {
+    function tie(userPick, pcPick) {
+      if (userPick.innerText === pcPick.innerText) {
         modalEmpate.style.display = "block";
         window.onclick = function (event) {
           if (event.target == modalEmpate) {
             modalEmpate.style.display = "none";
-            userChoice.innerText = "";
-            pcChoice.innerText = "";
+            userPick.innerText = "";
+            pcPick.innerText = "";
           }
         };
       }
     }
-    tie();
+    tie(userChoice, pcChoice);
 
     //PIEDRA//
-    function rock() {
+    function rock(userPick, pcPick) {
       if (
-        userChoice.innerText === "piedra" &&
-        pcChoice.innerText != "papel" &&
-        pcChoice.innerText != "piedra"
+        userPick.innerText === "piedra" &&
+        pcPick.innerText != "papel" &&
+        pcPick.innerText != "piedra"
       ) {
         modalGanaste.style.display = "block";
         window.onclick = function (event) {
           if (event.target == modalGanaste) {
             modalGanaste.style.display = "none";
-            userChoice.innerText = "";
-            pcChoice.innerText = "";
+            userPick.innerText = "";
+            pcPick.innerText = "";
           }
         };
       } else if (
-        userChoice.innerText === "piedra" &&
-        pcChoice.innerText != "tijera" &&
-        pcChoice.innerText != "piedra"
+        userPick.innerText === "piedra" &&
+        pcPick.innerText != "tijera" &&
+        pcPick.innerText != "piedra"
       ) {
         modalPerdiste.style.display = "block";
         window.onclick = function (event) {
           if (event.target == modalPerdiste) {
             modalPerdiste.style.display = "none";
-            userChoice.innerText = "";
-            pcChoice.innerText = "";
+            userPick.innerText = "";
+            pcPick.innerText = "";
           }
         };
       }
     }
-    rock();
+    rock(userChoice, pcChoice);
 
     //PAPEL//
     function papper() {

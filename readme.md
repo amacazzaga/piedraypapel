@@ -1,6 +1,6 @@
 # Rock, Papper, Scissors
 
-## The Game... or most like :)
+## The Game ... or something close :)
 
 - Made with HTML CSS & Javascript
 
