@@ -58,36 +58,36 @@ arrayUserButton.forEach((nodo) => {
     rock(userChoice, pcChoice);
 
     //PAPEL//
-    function papper() {
+    function paper(userPick, pcPick) {
       if (
-        userChoice.innerText === "papel" &&
-        pcChoice.innerText != "tijera" &&
-        pcChoice.innerText != "papel"
+        userPick.innerText === "papel" &&
+        pcPick.innerText != "tijera" &&
+        pcPick.innerText != "papel"
       ) {
         modalGanaste.style.display = "block";
         window.onclick = function (event) {
           if (event.target == modalGanaste) {
             modalGanaste.style.display = "none";
-            userChoice.innerText = "";
-            pcChoice.innerText = "";
+            userPick.innerText = "";
+            pcPick.innerText = "";
           }
         };
       } else if (
-        userChoice.innerText === "papel" &&
-        pcChoice.innerText != "piedra" &&
-        pcChoice.innerText != "papel"
+        userPick.innerText === "papel" &&
+        pcPick.innerText != "piedra" &&
+        pcPick.innerText != "papel"
       ) {
         modalPerdiste.style.display = "block";
         window.onclick = function (event) {
           if (event.target == modalPerdiste) {
             modalPerdiste.style.display = "none";
-            userChoice.innerText = "";
-            pcChoice.innerText = "";
+            userPick.innerText = "";
+            pcPick.innerText = "";
           }
         };
       }
     }
-    papper();
+    paper(userChoice, pcChoice);
 
     //TIJERA//
     function scissor() {
