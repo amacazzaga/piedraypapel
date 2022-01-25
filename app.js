@@ -90,35 +90,35 @@ arrayUserButton.forEach((nodo) => {
     paper(userChoice, pcChoice);
 
     //TIJERA//
-    function scissor() {
+    function scissor(userPick, pcPick) {
       if (
-        userChoice.innerText === "tijera" &&
-        pcChoice.innerText != "piedra" &&
-        pcChoice.innerText != "tijera"
+        userPick.innerText === "tijera" &&
+        pcPick.innerText != "piedra" &&
+        pcPick.innerText != "tijera"
       ) {
         modalGanaste.style.display = "block";
         window.onclick = function (event) {
           if (event.target == modalGanaste) {
             modalGanaste.style.display = "none";
-            userChoice.innerText = "";
-            pcChoice.innerText = "";
+            userPick.innerText = "";
+            pcPick.innerText = "";
           }
         };
       } else if (
-        userChoice.innerText === "tijera" &&
-        pcChoice.innerText != "papel" &&
-        pcChoice.innerText != "tijera"
+        userPick.innerText === "tijera" &&
+        pcPick.innerText != "papel" &&
+        pcPick.innerText != "tijera"
       ) {
         modalPerdiste.style.display = "block";
         window.onclick = function (event) {
           if (event.target == modalPerdiste) {
             modalPerdiste.style.display = "none";
-            userChoice.innerText = "";
-            pcChoice.innerText = "";
+            userPick.innerText = "";
+            pcPick.innerText = "";
           }
         };
       }
     }
-    scissor();
+    scissor(userChoice, pcChoice);
   });
 });
