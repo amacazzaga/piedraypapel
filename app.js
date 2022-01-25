@@ -24,7 +24,6 @@ arrayUserButton.forEach((nodo) => {
       }
     }
     tie(userChoice, pcChoice);
-
     //PIEDRA//
     function rock(userPick, pcPick) {
       if (
@@ -56,7 +55,6 @@ arrayUserButton.forEach((nodo) => {
       }
     }
     rock(userChoice, pcChoice);
-
     //PAPEL//
     function paper(userPick, pcPick) {
       if (
@@ -88,7 +86,6 @@ arrayUserButton.forEach((nodo) => {
       }
     }
     paper(userChoice, pcChoice);
-
     //TIJERA//
     function scissor(userPick, pcPick) {
       if (
